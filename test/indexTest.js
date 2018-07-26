@@ -3,7 +3,7 @@
 /*global  it:true*/
 /*eslint no-undef: "error"*/
 
-const index = require('../index');
+const index = require('../app');
 const chai = require('chai');
 const request = require('supertest');
 const expect = chai.expect;
@@ -16,8 +16,8 @@ describe('API Endpoints', ()=>{
 
 
 	//GET all entries
-	describe('GET -fetches all entries', ()=> {
-		it('should fetch all entries', (done)=> {
+	describe('to get all entries', ()=> {
+		it('should fetch all entries correctly', (done)=> {
 			request(index) .get('/api/v1/entries')
 				.end((err, res) =>{
 					expect(res.statusCode).to.equal(200);
@@ -29,7 +29,7 @@ describe('API Endpoints', ()=>{
 
 
 	//POST : Returns error message
-	describe('POST - creates an entry ', () => {
+	describe('to create an entry ', () => {
 		it('should create an entry if the entries are valid',(done) =>{
 			request(index) .post('/api/v1/entries') .send(entry) .end((err, res) =>{
 				if(err) done(err);

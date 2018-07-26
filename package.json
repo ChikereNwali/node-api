@@ -2,9 +2,9 @@
   "name": "node-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server/app.js",
     "lint": "eslint src",
     "coveralls": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov",
     "test": "nyc --reporter=html --reporter=text mocha test/ --exit --compilers js:babel-core/register"
