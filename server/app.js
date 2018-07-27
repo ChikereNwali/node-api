@@ -16,21 +16,21 @@ app.use((req, res, next) => {
 	next();
 });
 
-app.use((req, res, next) => {
-	const error = new Error('No found');
-	error.status = 400;
-	next(error);
-});
-
-app.use((error, req, res, next) => {
-	res.status(error.status || 500);
-	res.json({
-		error:{
-			message: error.message
-		}
-	});
-	next(error);
-});
+// app.use((req, res, next) => {
+// 	const error = new Error('No found');
+// 	error.status = 400;
+// 	next(error);
+// });
+//
+// app.use((error, req, res, next) => {
+// 	res.status(error.status || 500);
+// 	res.json({
+// 		error:{
+// 			message: error.message
+// 		}
+// 	});
+// 	next(error);
+// });
 //Fetch the index page
 app.get('/', (req,res) => {
 	res.send('Welcome to my new Diary Endpoints');

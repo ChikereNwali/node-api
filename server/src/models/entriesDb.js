@@ -1,3 +1,4 @@
+/*eslint linebreak-style: ["error", "windows"]*/
 //An array holding the lists of entries
 const entries = [
 	{id:1, title: 'My world cup experience', note:'It was awesome'},
