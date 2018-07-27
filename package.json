@@ -10,10 +10,10 @@
     "test": "nyc --reporter=html --reporter=text mocha test/ --exit --compilers js:babel-core/register"
   },
   "nyc": {
-   "exclude": [
-     "test"
-   ]
- },
+    "exclude": [
+      "test"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "express-routes-versioning": "^1.0.1",
     "joi": "^13.4.0",
     "nodemon": "^1.18.3",
+    "pg-promise": "^8.4.5",
     "pug": "^2.0.3"
   },
   "devDependencies": {

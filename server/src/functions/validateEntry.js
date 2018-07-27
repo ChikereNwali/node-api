@@ -9,5 +9,4 @@ const validateEntries = function (entry){
 	};
 	return Joi.validate(entry, schema);
 };
-
 module.exports = validateEntries;

@@ -9,11 +9,9 @@ router.getAll = (req, res) => {
 
 router.getOne = (req, res) => {
 	const entry = entries.find(c => c.id === parseInt(req.params.id) );
-	if(!entry) res.status(404).send('The entry with the given ID was not found');
-	res.send(entry);
+	if(!entry) res.status(404).json({message:'The entry with the given ID was not found'});
+	res.json({entry});
 };
-
-
 
 router.createEntry = (req,res) => {
 
